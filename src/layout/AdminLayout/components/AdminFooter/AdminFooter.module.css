@@ -1,0 +1,46 @@
+.footer {
+    background-color: white;
+    padding: 24px 0 0 0;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.copyright {
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.border {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin-top: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .copyright {
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 20px 0 0 0;
+    }
+
+    .border {
+        margin-top: 20px;
+    }
+}

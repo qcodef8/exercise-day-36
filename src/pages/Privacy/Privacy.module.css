@@ -1,0 +1,24 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 16px;
+}
+
+.meta {
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #111827;
+}
