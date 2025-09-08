@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faAnglesLeft,
@@ -9,6 +8,7 @@ import {
 
 // ? Styles
 import styles from "./Pagination.module.css";
+
 // ? Components
 import Button from "../Button";
 
@@ -18,23 +18,14 @@ function createPageRange(start, end) {
     return pages;
 }
 
-/**
- * Pagination Component
- * Props:
- * - totalItems: number (required)
- * - pageSize: number (default: 10)
- * - currentPage: number (default: 1)
- * - onPageChange: (page: number) => void (required)
- * - maxPagesToShow: number (default: 10)
- */
-export default function Pagination({
+function Pagination({
     totalItems,
     pageSize = 10,
     currentPage = 1,
-    onPageChange,
     maxPagesToShow = 10,
     showPageSizeSelector = false,
     pageSizeOptions = [10, 20, 30, 50],
+    onPageChange,
     onPageSizeChange,
 }) {
     const totalPages = Math.max(1, Math.ceil((totalItems || 0) / pageSize));
@@ -136,3 +127,5 @@ export default function Pagination({
         </nav>
     );
 }
+
+export default Pagination;

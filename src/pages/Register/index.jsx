@@ -1,6 +1,10 @@
-import React from "react";
-import styles from "./Register.module.css";
+// ? Assets
 import logo from "../../assets/images/logo.png";
+
+// ? Styles
+import styles from "./Register.module.css";
+
+// ? Components
 import Button from "../../components/Button";
 
 function Register() {
@@ -16,15 +20,27 @@ function Register() {
 
                 <div className={styles.formGroup}>
                     <label>Email</label>
-                    <input type="email" placeholder="Email của bạn" />
+                    <input
+                        type="email"
+                        aria-label="Email Input"
+                        placeholder="Email của bạn"
+                    />
                 </div>
                 <div className={styles.formGroup}>
                     <label>Mật khẩu</label>
-                    <input type="password" placeholder="Mật khẩu của bạn" />
+                    <input
+                        type="password"
+                        aria-label="Password Input"
+                        placeholder="Mật khẩu của bạn"
+                    />
                 </div>
                 <div className={styles.formGroup}>
                     <label>Nhập lại mật khẩu</label>
-                    <input type="password" placeholder="Nhập lại mật khẩu" />
+                    <input
+                        type="password"
+                        aria-label="Confirm Password Input"
+                        placeholder="Nhập lại mật khẩu"
+                    />
                 </div>
                 <Button className={styles.submit} variant="help">
                     Đăng ký

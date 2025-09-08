@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 
 // ? Components
@@ -25,12 +25,10 @@ function Posts() {
         Number.isNaN(pageParam) || pageParam < 1 ? 1 : pageParam;
     const pageSize = Number.isNaN(sizeParam) ? 20 : sizeParam;
 
-    const queryString = useMemo(() => {
-        const params = new URLSearchParams();
-        params.set("_page", String(currentPage));
-        params.set("_limit", String(pageSize));
-        return params.toString();
-    }, [currentPage, pageSize]);
+    const queryString = new URLSearchParams({
+        _page: String(currentPage),
+        _limit: String(pageSize),
+    }).toString();
 
     useEffect(() => {
         let aborted = false;
@@ -126,10 +124,10 @@ function Posts() {
                     totalItems={totalItems}
                     pageSize={pageSize}
                     currentPage={currentPage}
-                    onPageChange={handlePageChange}
                     maxPagesToShow={10}
                     showPageSizeSelector
                     pageSizeOptions={[10, 20, 30, 50]}
+                    onPageChange={handlePageChange}
                     onPageSizeChange={handlePageSizeChange}
                 />
             </div>

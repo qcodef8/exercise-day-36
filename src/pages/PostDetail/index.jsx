@@ -1,5 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams, useSearchParams } from "react-router";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 // ? Assets
 import avatar from "../../assets/images/avatar.jpg";
@@ -10,8 +13,6 @@ import styles from "./PostDetail.module.css";
 // ? Components
 import Loading from "../../components/Loading";
 import Button from "../../components/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const API_URL = "https://jsonplaceholder.typicode.com/posts";
 

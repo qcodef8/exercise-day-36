@@ -1,11 +1,12 @@
-import React from "react";
 import { NavLink } from "react-router";
-import styles from "./AuthSidebar.module.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faRightToBracket,
     faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
+
+import styles from "./AuthSidebar.module.css";
 
 function AuthSidebar() {
     return (

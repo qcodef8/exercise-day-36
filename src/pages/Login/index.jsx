@@ -1,6 +1,7 @@
-import React from "react";
-import styles from "./Login.module.css";
 import logo from "../../assets/images/logo.png";
+
+import styles from "./Login.module.css";
+
 import Button from "../../components/Button";
 
 function Login() {
@@ -16,11 +17,19 @@ function Login() {
 
                 <div className={styles.formGroup}>
                     <label>Email</label>
-                    <input type="email" placeholder="Email của bạn" />
+                    <input
+                        type="email"
+                        aria-label="Email Input"
+                        placeholder="Email của bạn"
+                    />
                 </div>
                 <div className={styles.formGroup}>
                     <label>Mật khẩu</label>
-                    <input type="password" placeholder="Mật khẩu của bạn" />
+                    <input
+                        type="password"
+                        aria-label="Password Input"
+                        placeholder="Mật khẩu của bạn"
+                    />
                 </div>
                 <Button className={styles.submit} variant="help">
                     Đăng nhập

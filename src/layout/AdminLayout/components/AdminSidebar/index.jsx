@@ -1,6 +1,5 @@
-import React from "react";
 import { NavLink } from "react-router";
-import styles from "./AdminSidebar.module.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faGauge,
@@ -8,6 +7,8 @@ import {
     faGear,
     faRightToBracket,
 } from "@fortawesome/free-solid-svg-icons";
+
+import styles from "./AdminSidebar.module.css";
 
 function AdminSidebar() {
     return (

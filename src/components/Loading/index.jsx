@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "./Loading.module.css";
 
-export default function Loading({ label = "Đang tải...", delayMs = 250 }) {
+function Loading({ label = "Đang tải...", delayMs = 250 }) {
     const [visible, setVisible] = useState(delayMs === 0);
 
     useEffect(() => {
@@ -20,3 +20,5 @@ export default function Loading({ label = "Đang tải...", delayMs = 250 }) {
         </div>
     );
 }
+
+export default Loading;
